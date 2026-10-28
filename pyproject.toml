@@ -1,0 +1,15 @@
+[project]
+name = "analytics-projects"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "pandas>=3.1.0",
+    "pyarrow>=26.0.0",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.4.0",
+]
