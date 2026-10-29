@@ -4,11 +4,21 @@ __pycache__/
 build/
 dist/
 wheels/
-*.egg-info
+*.egg-info/
 
 # Virtual environments
-.venv
+.venv/
 
+# Editor & IDE settings
+.vscode/
+.idea/
+
+# Environment secrets
 .env
-/data
+
+# Data files & volumes
+data/
 *.parquet
+*.csv
+*.csv.gz
+ny_taxi_postgres_data/
