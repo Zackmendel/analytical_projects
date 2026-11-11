@@ -73,6 +73,21 @@ def run(pg_user, pg_pass, pg_host, pg_port, pg_db, year, month, target_table, ch
             if_exists='append'
         )
 
+    # Ingest zone data
+    df_zone = pd.read_csv(
+        'https://github.com/DataTalksClub/nyc-tlc-data/releases/download/misc/taxi_zone_lookup.csv'
+        )
+
+    df_zone.head(0).to_sql(name='taxi_zone_lookup', con=engine, if_exists='replace')
+
+    df_zone.to_sql(
+        name='taxi_zone_lookup', 
+        con=engine, 
+        if_exists='append'
+    )
+
+    print(f'Inserted {len(df_zone)} zone lookup data')
+
 if __name__ == '__main__':
     run()
 
