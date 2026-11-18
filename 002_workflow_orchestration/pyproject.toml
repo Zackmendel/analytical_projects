@@ -1,0 +1,18 @@
+[project]
+name = "002-workflow-orchestration"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "pandas>=3.1.1",
+    "psycopg[binary]>=3.3.9",
+    "pyarrow>=26.0.1",
+    "sqlalchemy>=2.1.9",
+    "tqdm>=4.70.1",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.4.0",
+]
