@@ -87,6 +87,8 @@ services:
           url: http://localhost:8080/
           tutorial-flows:
             enabled: false
+    env_file:
+      - .env_encoded
     ports:
       - "8080:8080"
       - "8081:8081"
