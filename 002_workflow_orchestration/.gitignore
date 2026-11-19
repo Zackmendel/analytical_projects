@@ -1,0 +1,28 @@
+# Environment variables and encoded secrets
+.env
+.env.*
+.env_encoded
+*.json
+!flows/*.json
+
+# Python & Virtual Environments
+.venv/
+venv/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Data and temporary files
+*.csv
+*.csv.gz
+*.parquet
+tmp/
+
+# IDE & Editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
